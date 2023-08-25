@@ -1,10 +1,12 @@
 # This Project is based on Autoencoder and XAI to find IoT network Attack certainty
-Explainable AI and Deep Autoencoders-Based Security Framework for IoT Network Attack Certainty
-We use the reconstruction error of an autoencoder model to define IoT network anomalies (Anomaly Score)
-Anomalies are instances with high reconstruction error values.
-A threshold for the reconstruction error is estimated using a benign training dataset 
-If an anomaly exists in the incoming data, the explanatory model should be able to explain why this instance could not be well predicted (reconstructed) by the autoencoder model
-Error is linked to an explanation and the proposed method calculates the SHAP values of the output features and compares them to the true (anomalous) values of the input
-Then the features in the error list need to be reordered in a descending order such that find top R features which includes a set of selected features  
-The model uses SHAP values to describe which features were responsible for each of the high reconstruction errors in top R features
-Through analyzing feature influence and leveraging domain expertise, we can confidently distinguish whether the anomaly corresponds to an attack or a typical anomalous behavior
+Our approach involves an Explainable AI framework combined with Deep Autoencoders to enhance security in IoT networks against attacks. 
+An autoencoder model's reconstruction error is harnessed to identify anomalies within the IoT network, termed as Anomaly Score. 
+These anomalies are instances with notably high reconstruction error values.
+To establish a benchmark, we determine a threshold for the reconstruction error using a benign training dataset. 
+When an incoming data point showcases an anomaly, our explanatory model should elucidate why the autoencoder struggled to predict (reconstruct) that particular instance effectively.
+Connecting error to explanation, our method computes the SHAP (Shapley) values of the output features and contrasts them with the actual anomalous values of the input.
+Subsequently, the features in the error list are arranged in descending order. 
+Our objective is to identify the top R features, which form a set of selected features.
+Utilizing SHAP values, our model offers insights into the features that led to high reconstruction errors within the top R features. 
+By dissecting feature influence and leveraging domain expertise, we confidently differentiate whether the detected anomaly signifies an attack or a typical anomalous behavior in the network. 
+For experimental purposes, we employed the USBIDS dataset
